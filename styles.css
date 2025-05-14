@@ -201,47 +201,40 @@ nav {
 
 
 
-
-.contacto {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #f2f2f2;
+.contacto-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.contacto h2 {
-  color: #0056b3;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.contacto p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.btn-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  background-color: #25D366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-  background-color: #1ebc59;
+.info-contacto, .mapa-contacto {
+  flex: 1 1 300px;
 }
 
 .icono-whatsapp {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
+
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
 
 .galeria {
   color: #007BFF;
@@ -253,3 +246,61 @@ nav {
   background-color: #fff;
   text-align: center;
 }
+
+.ubicacion {
+  padding: 40px 20px;
+  background-color: #f0f8ff; /* Azul claro, lo podés cambiar */
+  text-align: center;
+}
+
+.ubicacion h2 {
+  font-size: 32px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 768px) {
+  .lista-servicios {
+    grid-template-columns: 1fr; /* Servicios en una sola columna */
+  }
+
+  .galeria-imagenes {
+    grid-template-columns: 1fr; /* Galería en una sola columna */
+  }
+
+  .reseñas-grid {
+    grid-template-columns: 1fr; /* Reseñas una debajo de otra */
+  }
+
+  .contacto-flex {
+    flex-direction: column; /* Mapa y contacto uno debajo del otro si vuelves a usar esta versión */
+  }
+
+  .servicio img {
+    max-width: 100%;
+    border-radius: 8px; /* Opcional: cuadradas en móviles también */
+  }
+
+  .btn-whatsapp {
+    width: 100%; /* Botón ocupa todo el ancho */
+    text-align: center;
+  }
+
+  iframe {
+    height: 250px; /* Mapa más alto en móvil */
+  }
+
+  .contenedor {
+    padding: 0 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
