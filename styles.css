@@ -39,7 +39,7 @@ header {
   }
   
   .nombre-sitio {
-    color: #2b91ff;
+    color: #1c89ff;
     font-size: 48px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
@@ -267,9 +267,9 @@ nav {
 }
 
 .map-container {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+ max-width: 600px;   /* Limita el ancho máximo */
+  margin: 0 auto;     /* Centra horizontalmente */
+  padding: 0 1rem;    /* Un poco de espacio lateral en móviles */
 }
 
 .map-container iframe {
@@ -278,8 +278,12 @@ nav {
   border: 0;
 }
 
+.gallery h2 {
+  color: #007BFF; 
+  }
+
 /* Estilos responsive para móviles */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .lista-servicios {
     grid-template-columns: 1fr; /* Servicios en una sola columna */
   }
@@ -333,14 +337,41 @@ nav {
   }
 
 
+  /* Estilos solo para pantallas pequeñas */
+@media (max-width: 768px) {
+
+  nav {
+    background-color: #dbdee1; /* más elegante */
+    }
+
   nav ul {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0;
+    gap: 1rem; /* Espaciado entre ítems */
   }
 
   nav ul li {
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
   }
+
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff; /* o el color que uses */
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* línea sutil */
+  }
+
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* efecto visual al pasar */
+  }
+}
+
 }
 
   
